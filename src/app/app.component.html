@@ -1,3 +1,54 @@
-<h1>
-  {{title}}
-</h1>
+<div id="db_wrapper">
+	<div id="db_container">
+		<header>
+		<div style="height: 100vh; width: 100%;  background: black; padding: 5% 0; text-align: center;" [class.db_hide]="hide">
+			<!-- <div style="color:  white; font-size: 20px; background: yellow; display: inline-block; padding: 10% 0; width: 600px;
+height: 200px;
+			">Hi<div class="words">
+			<span>breathtaking moments</span>
+			<span>lovely sounds</span>
+			<span>incredible magic</span>
+			<span>unseen experiences</span>
+			<span>happy feelings</span>
+			<span>beautiful butterflies</span>
+		</div> </div>
+			-->
+<div style="position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);">
+<div><div style="color:  white; font-size: 20px;">Hi, I'm Chris</div><div class="words">
+			<span>breathtaking moments</span>
+			<span>lovely sounds</span>
+			<span>incredible magic</span>
+			<span>unseen experiences</span>
+			<span>happy feelings</span>
+			<span>beautiful butterflies</span>
+		</div></div>
+
+</div>
+		
+		</div>
+		<nav>
+			<a [routerLink]="['/']">
+		    Home
+		  </a>
+		  |
+			<a [routerLink]="['/about']">
+		    About
+		  </a>
+		  |
+			<a [routerLink]="['/contact']">
+		    Contact
+		  </a>
+		</nav>
+		</header>
+		<main>
+			<router-outlet></router-outlet>
+		</main>
+	</div>
+	<footer>
+	  © 2016
+	</footer>
+</div>	

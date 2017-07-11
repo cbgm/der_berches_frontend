@@ -1,15 +1,15 @@
-import { Component, HostListener } from '@angular/core';
+import { Directive, HostListener } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+@Directive({
+  selector: '[appHideonscroll]'
 })
-export class AppComponent {
-  title = 'app works!';
+export class HideonscrollDirective {
+        
      public hide: boolean = false;
-    
-    @HostListener("window:scroll", [])
+
+  constructor() { }
+
+  @HostListener("window:scroll", [])
   onWindowScroll() {
          
          let Test = window.pageYOffset;
