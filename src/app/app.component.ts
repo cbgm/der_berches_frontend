@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
      public hide: boolean = false;
+    public show: boolean = true;
     
     @HostListener("window:scroll", [])
   onWindowScroll() {
@@ -15,9 +16,11 @@ export class AppComponent {
          let Test = window.pageYOffset;
     if (Test > 50) {
         console.log(Test);
-        this.hide = true
+        this.hide = true;
+        this.show = false;
     } else if (this.hide && Test < 50) {
       this.hide = false;
+        this.show = true;
     }
          
   }

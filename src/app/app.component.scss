@@ -7,6 +7,9 @@
 	#db_container {
 		min-height: 100%;
 		margin-bottom: -100px;
+		padding-left: 15px;
+		padding-right: 15px;
+
 			
 		header {
 			@extend .db_full;
@@ -14,36 +17,76 @@
 			#db_header_container {
 				height: 100vh; 
 				width: 100%;  
-				background: black; 
+				position: relative;
+			}
+		
+			#db_header_container_main {
 				text-align: center;
 				display: flex;
 				justify-content: center;
   				align-items: center;
 			}
 		
-			#db_header_container_content {
-				background: yellow;
+			#db_header_container_main_logo {
 				height: 200px;
 			}
 		
-			#db_header_container_content_left {
+			#db_header_container_main_logo_left {
 				float: left;
 				max-width: 200px;
 				height: 100%;
-				background: red;
 				display: flex;
   				justify-content: center;
   				align-items: center;
+  				
+  				img {
+  					max-width: 200px;
+  				}
 				
 			}
 		
-			#db_header_container_content_right {
+			#db_header_container_main_logo_right {
 				float: right;
 				display: flex;
 				height: 100%;
+				max-width:700px;
 				justify-content: center;
   				align-items: center;
+			
+				#db_header_container_main_logo_right_heading {
+					
+					div:nth-child(1) { 
+						color:  black;
+						font-size: 4em; 
+						display: block; 
+					}
 				
+					div:nth-child(2) { 
+						color:  white;
+						font-size: 1.5em; 
+						display: block; 
+					}
+				}
+				
+			}
+		
+			#db_header_container_social {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				
+				img {
+					width: 30px; 
+					height: 30px;
+					margin: 10px;
+					float: right;
+					
+					&:hover {
+						opacity: 0.7;
+						cursor: pointer;
+					}
+				}
+			
 			}
 
 			nav {
@@ -72,19 +115,26 @@
 .db_full {
 	width: 100%;
 	display: inline-block;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 
 
 .db_hide {
 	display:none;
-	}
+}
 
+.db_center_content {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
 
+.words {
+	display: block;
+	text-align: left;
+}
 
 .words span{
-	color :white;
+	color :black;
 	position: absolute;
 	opacity: 0;
 	overflow: hidden;
@@ -92,7 +142,7 @@
 }
 
 .words span{
-	animation: rotateWordsFirst 8s linear infinite 0s;
+	animation: rotateWords 8s linear infinite 0s;
 }
 
 .words span:nth-child(2) { 
@@ -111,9 +161,9 @@
 	animation-delay: 10s; 
 }
 
-@keyframes rotateWordsFirst {
-    0% { opacity: 1; animation-timing-function: ease-in;}
-    8% { opacity: 1;}
+@keyframes rotateWords {
+    0% { opacity:0.7; animation-timing-function: ease-in;}
+    8% { opacity: 0.7;}
     12% { opacity: 0;}
 	25% { opacity: 0;}
     100% { opacity: 0; }

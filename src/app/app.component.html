@@ -1,28 +1,36 @@
 <div id="db_wrapper">
 	<div id="db_container">
 		<header>
-			<div id="db_header_container" [class.db_hide]="hide">
-
-				<div id="db_header_container_content">
-					
-					<div id="db_header_container_content_left">
-						<img style="width: 50px; height: 50px;" src="" alt=""/>
-					</div>
-					<div id="db_header_container_content_right">
-						<div>
-							<div style="color:  white; font-size: 20px; display: block;">Hi, I'm Chris</div>
-							<div style="display: block; text-align: left;" class="words">
-								<span>#Creative</span>
-								<span>#Developer</span>
-								<span>#Problem solver</span>
-								<span>#The person who fits your needs</span>
+			<div id="db_header_container" [class.db_hide]="hide" [class.db_center_content]="show" >
+				<div id="db_header_container_main">
+	
+					<div id="db_header_container_main_logo">
+						
+						<div id="db_header_container_main_logo_left">
+							<img src="assets/images/test.jpg" alt=""/>
+						</div>
+						<div id="db_header_container_main_logo_right">
+							<div id="db_header_container_main_logo_right_heading">
+								<div>Hi, I'm Chris</div>
+								<div class="words">
+									<span>#Creative</span>
+									<span>#Developer</span>
+									<span>#Problem solver</span>
+									<span>#Person who fits your needs</span>
+								</div>
 							</div>
 						</div>
+	
 					</div>
-
+					
 				</div>
-		
+				<div id="db_header_container_social" >
+					<!-- <img src="assets/images/close-envelope.svg" alt=""/>-->
+					<img src="assets/images/xing-logotype.svg" alt=""/>
+					<img src="assets/images/google-plus-logo.svg" alt=""/>				
+				</div>
 			</div>
+			
 		<nav>
 			<a [routerLink]="['/']">
 		    Home
